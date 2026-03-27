@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Asian Neuroscience Network — Members</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a2340;
+  --blue: #2563eb;
+  --purple: #6d28d9;
+  --accent: #7c3aed;
+  --light-blue: #dbeafe;
+  --bg: #f8f9fc;
+  --white: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  --card-shadow-hover: 0 8px 32px rgba(37,99,235,0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--navy);
+  color: white;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(124,58,237,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(37,99,235,0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+.header-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 32px 48px;
+}
+.header-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 18px;
+}
+.header-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #93c5fd;
+  border-radius: 2px;
+}
+h1.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+  color: white;
+  margin-bottom: 16px;
+}
+h1.site-title em {
+  font-style: normal;
+  color: #a5b4fc;
+}
+.site-subtitle {
+  font-size: 16px;
+  color: #94a3b8;
+  font-weight: 300;
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+.header-stats {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: left; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+.stat-desc {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* ── NAV / FILTER BAR ── */
+.filter-bar {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+.filter-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.filter-inner::-webkit-scrollbar { display: none; }
+.filter-btn {
+  flex-shrink: 0;
+  padding: 16px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+  white-space: nowrap;
+}
+.filter-btn:hover { color: var(--blue); }
+.filter-btn.active { color: var(--blue); border-bottom-color: var(--blue); font-weight: 600; }
+
+.search-wrap {
+  margin-left: auto;
+  padding: 10px 0;
+  flex-shrink: 0;
+}
+.search-input {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  outline: none;
+  color: var(--text);
+  background: var(--bg);
+  width: 200px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.search-input::placeholder { color: var(--muted); }
+.search-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+/* ── MAIN ── */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 32px 80px;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-heading::after {
+  content: attr(data-count);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px 10px;
+  letter-spacing: .03em;
+}
+.section-heading:first-of-type { margin-top: 0; }
+
+/* ── CARD GRID ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.member-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: default;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+  animation: cardIn .4s ease both;
+}
+.member-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.member-card.hidden { display: none; }
+
+/* Avatar */
+.avatar-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 3px solid var(--light-blue);
+  flex-shrink: 0;
+  position: relative;
+  background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 100%);
+}
+.avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.avatar-initials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -.02em;
+}
+
+.member-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.member-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.member-inst {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex: 1;
+}
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: var(--light-blue);
+  transition: background .15s, color .15s;
+}
+.email-btn:hover { background: #bfdbfe; color: var(--navy); }
+.email-btn svg { flex-shrink: 0; }
+.no-email {
+  font-size: 11px;
+  color: var(--border);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 64px 32px;
+  color: var(--muted);
+  display: none;
+}
+.empty-state.show { display: block; }
+.empty-state h3 { font-size: 18px; margin-bottom: 8px; color: var(--text); }
+.empty-state p { font-size: 14px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header-inner { padding: 40px 20px 36px; }
+  .main { padding: 24px 16px 60px; }
+  .filter-inner { padding: 0 16px; }
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+  .avatar-wrap { width: 64px; height: 64px; }
+  .avatar-initials { font-size: 18px; }
+  .member-name { font-size: 13px; }
+  .header-stats { gap: 24px; }
+  .search-input { width: 140px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-kicker">Community Directory</div>
+    <h1 class="site-title">South Asian<br><em>Neuroscience Network</em></h1>
+    <p class="site-subtitle">A global community of neuroscientists, researchers, and clinicians of South Asian heritage — spanning academia, medicine, and industry.</p>
+    <div class="header-stats">
+      <div class="stat-item"><div class="stat-num" id="stat-total">0</div><div class="stat-desc">Members</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-inst">0</div><div class="stat-desc">Institutions</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-countries">0</div><div class="stat-desc">Countries</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all" onclick="filterCards('all', this)">All Members</button>
+    <button class="filter-btn" data-filter="professor" onclick="filterCards('professor', this)">Professors</button>
+    <button class="filter-btn" data-filter="postdoc" onclick="filterCards('postdoc', this)">Postdocs</button>
+    <button class="filter-btn" data-filter="phd" onclick="filterCards('phd', this)">PhD Students</button>
+    <button class="filter-btn" data-filter="grad" onclick="filterCards('grad', this)">Graduate Students</button>
+    <button class="filter-btn" data-filter="undergrad" onclick="filterCards('undergrad', this)">Undergrads</button>
+    <button class="filter-btn" data-filter="other" onclick="filterCards('other', this)">Professionals</button>
+    <div class="search-wrap">
+      <input class="search-input" type="text" placeholder="Search members…" oninput="searchCards(this.value)">
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="main" id="main-content">
+  <div class="empty-state" id="empty-state">
+    <h3>No members found</h3>
+    <p>Try adjusting your search or filter.</p>
+  </div>
+</main>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const members = [
+  // PROFESSORS / FULL FACULTY
+  {name:"Anil Seth",inst:"University of Sussex",title:"Professor",email:"a.k.seth@sussex.ac.uk",stage:"professor"},
+  {name:"Bhismadev Chakrabarti",inst:"University of Reading",title:"Professor",email:"b.chakrabarti@reading.ac.uk",stage:"professor"},
+  {name:"Rajesh Kana",inst:"University of Alabama",title:"Professor",email:"rkkana@ua.edu",stage:"professor"},
+  {name:"Chandan Vaidya",inst:"Georgetown University",title:"Professor",email:"cjv2@georgetown.edu",stage:"professor"},
+  {name:"Daniel Ansari",inst:"Western University, Canada",title:"Professor",email:"daniel.ansari@uwo.ca",stage:"professor"},
+  {name:"Vinod Menon",inst:"Stanford University",title:"Professor",email:"menon@stanford.edu",stage:"professor"},
+  {name:"Veena D. Dwivedi",inst:"Brock University",title:"Professor",email:"vdwivedi@brocku.ca",stage:"professor"},
+  {name:"Sanjay Srivastava",inst:"University of Oregon",title:"Professor",email:"sanjay@uoregon.edu",stage:"professor"},
+  {name:"Fahmeed Hyder",inst:"Yale University",title:"Professor",email:"fahmeed.hyder@yale.edu",stage:"professor"},
+  {name:"Manpreet K. Singh",inst:"University of California, Davis",title:"Professor",email:"mpksingh@ucdavis.edu",stage:"professor"},
+  {name:"Gopi Deshpande",inst:"Auburn University",title:"Professor",email:"gopi@auburn.edu",stage:"professor"},
+  {name:"Vijay Mittal",inst:"Northwestern University",title:"Professor",email:"vijay.mittal@northwestern.edu",stage:"professor"},
+  {name:"Fahad Saeed",inst:"Florida International University",title:"Associate Professor",email:"fsaeed@fiu.edu",stage:"professor"},
+  {name:"Varsha Singh",inst:"IIT Delhi",title:"Associate Professor",email:"vsingh@hss.iitd.ac.in",stage:"professor"},
+  {name:"Mallar Chakravarty",inst:"McGill University / Douglas Research Centre",title:"Associate Professor",email:"mallar.chak@gmail.com",stage:"professor"},
+  {name:"Siddharth Ramanan",inst:"University of Cambridge",title:"Postdoctoral Research Associate",email:"siddharth.ramanan@mrc-cbu.cam.ac.uk",stage:"postdoc"},
+  {name:"Nasir Uddin",inst:"University of Rochester",title:"Assistant Professor",email:"nasir_uddin@urmc.rochester.edu",stage:"professor"},
+  {name:"Kaustubh Supekar",inst:"Stanford University",title:"Associate Professor",email:"ksupekar@stanford.edu",stage:"professor"},
+  {name:"Gagan Wig",inst:"University of Texas at Dallas",title:"Associate Professor",email:"gwig@utdallas.edu",stage:"professor"},
+  {name:"Bharat Biswal",inst:"NJIT",title:"Professor",email:"biswal@njit.edu",stage:"professor"},
+  {name:"Saloni Krishnan",inst:"Royal Holloway, University of London",title:"Assistant Professor",email:"saloni.krishnan@rhul.ac.uk",stage:"professor"},
+  {name:"Shikha Prashad",inst:"Washington State University",title:"Assistant Professor",email:"s.prashad@wsu.edu",stage:"professor"},
+  {name:"Abhishek Banerjee",inst:"Newcastle University",title:"Associate Professor",email:"abhi.banerjee@newcastle.ac.uk",stage:"professor"},
+  {name:"M. Natasha Rajah",inst:"McGill University",title:"Full Professor",email:"maria.rajah@mcgill.ca",stage:"professor"},
+  {name:"Chandra Sripada",inst:"University of Michigan, Ann Arbor",title:"Associate Professor",email:"sripada@umich.edu",stage:"professor"},
+  {name:"Aysha Motala",inst:"University of Stirling, UK",title:"Assistant Professor",email:"aysha.motala@stir.ac.uk",stage:"professor"},
+  {name:"Ruchika Prakash",inst:"Ohio State University",title:"Professor & Director, Neuroimaging Center",email:"prakash.30@osu.edu",stage:"professor"},
+  {name:"Sahil Bajaj",inst:"Boys Town National Research Hospital",title:"Assistant Professor",email:"sahil.neuro@gmail.com",stage:"professor"},
+  {name:"Sheeba Arnold Anteraper",inst:"Carle Illinois Advanced Imaging Center",title:"Assistant Professor",email:"sheeba@mit.edu",stage:"professor"},
+  {name:"Faisal Mushtaq",inst:"University of Leeds, UK",title:"Associate Professor",email:"f.mushtaq@leeds.ac.uk",stage:"professor"},
+  {name:"Lucina Uddin",inst:"UCLA",title:"Professor",email:"lucina@ucla.edu",stage:"professor"},
+  {name:"Apoorva Bhandari",inst:"Brown University",title:"Assistant Professor (Research)",email:"apoorva_bhandari@brown.edu",stage:"professor"},
+  {name:"AmanPreet Badhwar",inst:"CRIUGM / University of Montreal",title:"Assistant Professor",email:"amanpreet.badhwar@umontreal.ca",stage:"professor"},
+  {name:"Poornima Kumar",inst:"Harvard Medical School / McLean Hospital",title:"Assistant Professor (Research)",email:"pkumar@mclean.harvard.edu",stage:"professor"},
+  {name:"Manish Saggar",inst:"Stanford University",title:"Assistant Professor",email:"saggar@stanford.edu",stage:"professor"},
+  {name:"Vishnu Sreekumar",inst:"IIIT Hyderabad",title:"Assistant Professor",email:"vishnu.sreekumar@iiit.ac.in",stage:"professor"},
+  {name:"Adeel Razi",inst:"Monash / UCL",title:"Associate Professor",email:"adeel.razi@monash.edu",stage:"professor"},
+  {name:"Ravi Menon",inst:"Western University",title:"Full Professor",email:"rmenon@uwo.ca",stage:"professor"},
+  {name:"Malathi Thothathiri",inst:"George Washington University",title:"Associate Professor",email:"malathi@gwu.edu",stage:"professor"},
+  {name:"Pradeep Reddy Raamana",inst:"University of Pittsburgh",title:"Assistant Professor",email:"raamanap@pitt.edu",stage:"professor"},
+  {name:"Uma Karmarkar",inst:"UC San Diego",title:"Assistant Professor",email:"ukarmarkar@ucsd.edu",stage:"professor"},
+  {name:"Avniel Ghuman",inst:"University of Pittsburgh",title:"Associate Professor",email:"ghumana@upmc.edu",stage:"professor"},
+  {name:"Ragini Verma",inst:"University of Pennsylvania",title:"Professor of Radiology & Neurosurgery",email:"ragini@pennmedicine.upenn.edu",stage:"professor"},
+  {name:"Ajay Satpute",inst:"Northeastern University",title:"Assistant Professor",email:"a.satpute@northeastern.edu",stage:"professor"},
+  {name:"Natasha Chaku",inst:"Indiana University",title:"Assistant Professor",email:"nchaku@iu.edu",stage:"professor"},
+  {name:"Muhammad Parvaz",inst:"Icahn School of Medicine at Mount Sinai",title:"Associate Professor",email:"muhammad.parvaz@mssm.edu",stage:"professor"},
+  {name:"Muthuraman Muthuraman",inst:"University of Augsburg",title:"Associate Professor",email:"muthuraman.muthuraman@uni-a.de",stage:"professor"},
+  {name:"Manoj Saranathan",inst:"UMass Chan Medical School",title:"Professor",email:"manojkumar.saranathan@umassmed.edu",stage:"professor"},
+  {name:"Tilak Ratnanather",inst:"Johns Hopkins University",title:"Associate Research Professor",email:"jratnan1@jh.edu",stage:"professor"},
+  {name:"Ateka Contractor",inst:"University of North Texas",title:"Associate Professor",email:"ateka.contractor@unt.edu",stage:"professor"},
+  {name:"Jibran Khokhar",inst:"Western University",title:"Associate Professor",email:"jkhokha@uwo.ca",stage:"professor"},
+  {name:"Srikanth Ramaswamy",inst:"Newcastle University",title:"Assistant Professor",email:"srikanth.ramaswamy@gmail.com",stage:"professor"},
+  {name:"Deepak Sarpal",inst:"University of Pittsburgh",title:"Assistant Professor",email:"sarpaldk@upmc.edu",stage:"professor"},
+  {name:"Vishnu 'Deepu' Murty",inst:"Temple University",title:"Assistant Professor",email:"vishnu.murty@temple.edu",stage:"professor"},
+  {name:"Aarti Nair",inst:"Loma Linda University",title:"Assistant Professor",email:"aartinair@gmail.com",stage:"professor"},
+
+  // POSTDOCS / RESEARCH SCIENTISTS
+  {name:"Vikram Shenoy Handiru",inst:"Kessler Foundation, NJ",title:"Research Scientist",email:"VShenoy@kesslerfoundation.org",stage:"postdoc"},
+  {name:"Venkata Chaitanya Chirumamilla",inst:"Children's National Hospital, Washington DC",title:"Staff Scientist",email:"venkatachaitanya409@gmail.com",stage:"postdoc"},
+  {name:"Megha Sehgal",inst:"UCLA",title:"Postdoc",email:"meghasehgal@gmail.com",stage:"postdoc"},
+  {name:"Kaveri Sehgal",inst:"Yale Child Study Center",title:"Postgraduate Research Associate",email:"kaveri.sehgal@yale.edu",stage:"postdoc"},
+  {name:"Kirthana Kunikullaya U",inst:"University of Rennes",title:"Postdoctoral Fellow",email:"kirthana.rguhs@gmail.com",stage:"postdoc"},
+  {name:"Praveen Gurunath Bharathi",inst:"University of Manchester",title:"Postdoctoral Research Associate",email:"praveengb@manchester.ac.uk",stage:"postdoc"},
+  {name:"Sidhant Chopra",inst:"Yale University",title:"Postdoctoral Associate / Psychologist",email:"sidhant.chopra@yale.edu",stage:"postdoc"},
+  {name:"Kshipra Gurunandan",inst:"University of Cambridge",title:"Postdoctoral Researcher",email:"kshipra.gurunandan@mrc-cbu.cam.ac.uk",stage:"postdoc"},
+  {name:"Elvisha Dhamala",inst:"Yale University",title:"Postdoc",email:"elvisha@gmail.com",stage:"postdoc"},
+  {name:"Vinod Kumar Jangir",inst:"Max Planck Institute for Biological Cybernetics",title:"Postdoc",email:"mail.vinod@yahoo.com",stage:"postdoc"},
+  {name:"Sucheta Chakravarty",inst:"Brown University",title:"Postdoc",email:"bharatb@miami.edu",stage:"postdoc"},
+  {name:"Nuttida Rungratsameetaweemana",inst:"Salk Institute / Columbia University",title:"Postdoc",email:"nuttida.rungrat@gmail.com",stage:"postdoc"},
+  {name:"Nisha Raj",inst:"Emory University",title:"Postdoc",email:"nraj2@emory.edu",stage:"postdoc"},
+  {name:"Anjanibhargavi Ragothaman",inst:"OHSU",title:"Postdoc",email:"anjaniragothaman@gmail.com",stage:"postdoc"},
+  {name:"Eshin Jolly",inst:"Dartmouth College",title:"Postdoc",email:"eshin.jolly@dartmouth.edu",stage:"postdoc"},
+  {name:"Baburam Bhattarai",inst:"Yale University",title:"Postdoc",email:"baburam.bhattarai@yale.edu",stage:"postdoc"},
+  {name:"Richa Phogat",inst:"Newcastle University",title:"Postdoc",email:"riphogat@gmail.com",stage:"postdoc"},
+  {name:"Rahul Gaurav",inst:"Sorbonne University / Paris Brain Institute",title:"Researcher",email:"rahul.gaurav@icm-institute.org",stage:"postdoc"},
+  {name:"Karthik Gopinath",inst:"MGH & Harvard Medical School",title:"Postdoc",email:"kgopinath@mgh.harvard.edu",stage:"postdoc"},
+  {name:"Vikram Venkatraghavan",inst:"Alzheimer Center, Amsterdam UMC",title:"Postdoc",email:"v.venkatraghavan@amsterdamumc.nl",stage:"postdoc"},
+  {name:"Zabin Patel",inst:"Northwestern University",title:"Postdoc",email:"zabinps@gmail.com",stage:"postdoc"},
+  {name:"Varun Arunachalam Chandran",inst:"UC Davis",title:"Postdoctoral Research Fellow",email:"varunchandran28@gmail.com",stage:"postdoc"},
+  {name:"Sivaniya Subramaniapillai",inst:"Lausanne University Hospital",title:"Postdoc",email:"sivaniya@gmail.com",stage:"postdoc"},
+  {name:"Venkat Krishnamoorthy",inst:"Western University",title:"Postdoctoral Associate",email:"vkrish7@uwo.ca",stage:"postdoc"},
+  {name:"Saurabh Sonkusare",inst:"University of Cambridge",title:"Postdoc",email:"ss2794@cam.ac.uk",stage:"postdoc"},
+  {name:"Farah Mahmud",inst:"Columbia University Medical Center / NYSPI",title:"Postdoc",email:"farahdahod@gmail.com",stage:"postdoc"},
+  {name:"Salahuddin Mohammed",inst:"Yale University",title:"Postdoctoral Associate",email:"msalahuddin.mohammed@gmail.com",stage:"postdoc"},
+  {name:"Neelima Wagley",inst:"Vanderbilt University",title:"Postdoctoral Research Scholar",email:"neelima.wagley@vanderbilt.edu",stage:"postdoc"},
+  {name:"Sridhar Srinivasan",inst:"Austrian Academy of Sciences",title:"Postdoc",email:"ssri.oeaw@gmail.com",stage:"postdoc"},
+  {name:"Vaidehi Natu",inst:"Stanford University",title:"Staff Research Scientist / Teaching Faculty",email:"vnatu@stanford.edu",stage:"postdoc"},
+  {name:"Andrew Michael",inst:"Duke University",title:"Director Imaging",email:"andrew.michael@duke.edu",stage:"postdoc"},
+  {name:"Nabin Koirala",inst:"Yale / UConn / Nathan Klein Institute",title:"Research Faculty",email:"nabin.koirala@yale.edu",stage:"postdoc"},
+
+  // PHD STUDENTS
+  {name:"Vansh Bansal",inst:"Virginia Tech",title:"PhD Student",email:"vansh@vt.edu",stage:"phd"},
+  {name:"Gates Palissery",inst:"Virginia Tech",title:"PhD Student",email:"gatespalissery@vt.edu",stage:"phd"},
+  {name:"Bharat B",inst:"University of Miami",title:"Doctoral Student",email:"bharatb@miami.edu",stage:"phd"},
+  {name:"Akanksha Gupta",inst:"Institut de Neurosciences des Systèmes",title:"Doctoral Student",email:"akanksha.GUPTA.1@univ-amu.fr",stage:"phd"},
+  {name:"Pratik Purohit",inst:"IIT (BHU), Varanasi",title:"PhD Student",email:"pratikpurohit.rs.bme17@iitbhu.ac.in",stage:"phd"},
+  {name:"Sanju Koirala",inst:"University of Minnesota Twin Cities",title:"PhD Student",email:"koira019@umn.edu",stage:"phd"},
+  {name:"M Ganesh Kumar",inst:"National University of Singapore",title:"PhD Student",email:"m_ganeshkumar@u.nus.edu",stage:"phd"},
+  {name:"Aahana Bajracharya",inst:"Washington University in St. Louis",title:"PhD Student",email:"aahana@wustl.edu",stage:"phd"},
+  {name:"Vinayak Agarwal",inst:"MIT",title:"PhD Student",email:"vinayaka@mit.edu",stage:"phd"},
+  {name:"Amritha Harikumar",inst:"Georgia State University",title:"PhD Student",email:"aharikumar1@student.gsu.edu",stage:"phd"},
+  {name:"Aradhana Srinagesh",inst:"University of Rhode Island",title:"Doctoral Student",email:"asrinagesh@uri.edu",stage:"phd"},
+  {name:"Maira Karan",inst:"UCLA",title:"PhD Student",email:"mfkaran@ucla.edu",stage:"phd"},
+  {name:"Sushmita Sadhukha",inst:"Dartmouth College",title:"PhD Student",email:"sushmita.sadhukha.gr@dartmouth.edu",stage:"phd"},
+  {name:"Jivesh Ramduny",inst:"Trinity College Dublin",title:"PhD Student",email:"ramdunyj@tcd.ie",stage:"phd"},
+  {name:"Nusrat Jahan (Progga)",inst:"Ohio State University",title:"PhD Student",email:"jahan.34@osu.edu",stage:"phd"},
+  {name:"Aravind Kalathil",inst:"Ohio State University",title:"PhD Student",email:"aravind.kalathil@osumc.edu",stage:"phd"},
+  {name:"Kavisha Fernando",inst:"University of Melbourne",title:"PhD Student",email:"kfernando@student.unimelb.edu.au",stage:"phd"},
+  {name:"Richa Gautam",inst:"University of Delaware",title:"PhD Student",email:"rigautam@udel.edu",stage:"phd"},
+  {name:"Neeti Mehta",inst:"Emory University",title:"PhD Student",email:"ndmeht2@emory.edu",stage:"phd"},
+  {name:"Deepthi Bannau",inst:"UC Berkeley",title:"PhD Student",email:"deepthi_bannai@berkeley.edu",stage:"phd"},
+  {name:"Priyamvada Modak",inst:"Indiana University Bloomington",title:"PhD Student",email:"pmodak@iu.edu",stage:"phd"},
+  {name:"Sejal Mistry-Patel",inst:"Texas A&M University",title:"Doctoral Student",email:"sejalmistry@tamu.edu",stage:"phd"},
+  {name:"Adnan Rashid",inst:"Georgetown University",title:"Graduate Student",email:"ar1652@georgetown.edu",stage:"phd"},
+  {name:"Razia Sahi",inst:"UCLA",title:"Doctoral Student",email:"rsahi1@ucla.edu",stage:"phd"},
+  {name:"Ritika Rastogi",inst:"UCLA",title:"Doctoral Student",email:"rras@g.ucla.edu",stage:"phd"},
+  {name:"Afsara Zaheed",inst:"University of Michigan",title:"Doctoral Candidate",email:"afsaraz@umich.edu",stage:"phd"},
+  {name:"Priyanka Sigar",inst:"UCLA",title:"Doctoral Student",email:"priyasigar95@g.ucla.edu",stage:"phd"},
+  {name:"Rosy Karna",inst:"Stanford / Palo Alto University",title:"Graduate Student (Psy.D)",email:"rkarna@stanford.edu",stage:"phd"},
+  {name:"Manasi Jayakumar",inst:"Columbia University",title:"PhD Student",email:"manasi.jayakumar@columbia.edu",stage:"phd"},
+  {name:"Sourin Chatterjee",inst:"Aix-Marseille University",title:"PhD Student",email:"sourinchatterjee2001@gmail.com",stage:"phd"},
+  {name:"Junaid Merchant",inst:"University of Maryland",title:"Graduate Student",email:"merchantjs@gmail.com",stage:"phd"},
+  {name:"Raihan Kabir Ratul",inst:"Otto von Guericke University Magdeburg",title:"MSc Student",email:"raihan.ratul@ovgu.de",stage:"grad"},
+  {name:"Jivesh Ramduny",inst:"Trinity College Dublin",title:"PhD Student",email:"ramdunyj@tcd.ie",stage:"phd"},
+
+  // GRADUATE / MASTERS STUDENTS
+  {name:"Maryam Khan",inst:"University of Edinburgh",title:"Graduate Student (MSc)",email:"maryam.10.khan@gmail.com",stage:"grad"},
+  {name:"Chinmayi Balusu",inst:"Columbia University",title:"Graduate Student (MPH)",email:"chinmayi.balusu@columbia.edu",stage:"grad"},
+  {name:"Niyatee Narkar",inst:"University of Guelph",title:"Graduate Student (MSc)",email:"nnarkar@uoguelph.ca",stage:"grad"},
+  {name:"A. N. M. Sajedul Alam",inst:"Brac University, Bangladesh",title:"MSc Student",email:"a.n.m.sajedul.alam@g.bracu.ac.bd",stage:"grad"},
+  {name:"Suchita Ganesan",inst:"University of Southern California",title:"Graduate Student (MSc)",email:"suchitag@usc.edu",stage:"grad"},
+  {name:"Ankit Gupta",inst:"Graduate Institute of Mind, Brain & Consciousness, Taipei",title:"MS Student",email:"ankiitgupta7@gmail.com",stage:"grad"},
+  {name:"Kumar Neelabh",inst:"IIIT Hyderabad",title:"MS Student",email:"kumar.neelabh@research.iiit.ac.in",stage:"grad"},
+  {name:"Tasmia Alam",inst:"San Diego State University",title:"Master's Student Researcher",email:"talam9104@sdsu.edu",stage:"grad"},
+  {name:"Sheetal Jadhav",inst:"IISER Pune",title:"Graduate Student",email:"31jsheetal@gmail.com",stage:"grad"},
+
+  // UNDERGRAD / EARLY CAREER
+  {name:"Nirmitee Mulay",inst:"IISER Kolkata",title:"BS-MS Student",email:"nirmiteemulay@gmail.com",stage:"undergrad"},
+  {name:"Anushka Kumar",inst:"Delhi University / Cambridge & LSE",title:"Undergraduate & Research Intern",email:"kumaranushka2002@gmail.com",stage:"undergrad"},
+  {name:"Shriya Simha",inst:"Brown University",title:"Undergraduate Student",email:"shriya.1simha@gmail.com",stage:"undergrad"},
+  {name:"Kunal Kondhare",inst:"University of Sunderland",title:"Undergraduate Student",email:"bh72vr@student.sunderland.ac.uk",stage:"undergrad"},
+  {name:"Ruchika Gadagkar",inst:"University of Washington",title:"Undergraduate Student",email:"rgadagka@uw.edu",stage:"undergrad"},
+  {name:"Spatika Jayaram",inst:"IISER Mohali",title:"BS-MS Student",email:"spa.jayaram@gmail.com",stage:"undergrad"},
+  {name:"Inchara A U Athreya",inst:"University of Warwick, UK",title:"Undergraduate Student",email:"inchara.athreya@warwick.ac.uk",stage:"undergrad"},
+  {name:"Arshia Verma",inst:"University of Texas at Austin",title:"Undergraduate Student",email:"arshia.verma20@gmail.com",stage:"undergrad"},
+  {name:"Owais Ahmad Shah",inst:"University of Kashmir",title:"Neuroscience Undergraduate",email:"owaisshahsyed3@gmail.com",stage:"undergrad"},
+  {name:"Eisha Haque",inst:"University of Nebraska-Lincoln",title:"Post-Bacc Student",email:"eishahaque21@gmail.com",stage:"undergrad"},
+  {name:"Debisuti Saha",inst:"RIMS, Imphal",title:"MBBS Student",email:"sahadebistuti@gmail.com",stage:"undergrad"},
+  {name:"Pranjal Garg",inst:"AIIMS Rishikesh",title:"MBBS Student",email:"pranjaldun@gmail.com",stage:"undergrad"},
+
+  // OTHER PROFESSIONALS
+  {name:"Monisha Dhingra",inst:"London School of Economics",title:"Pre-doctoral Research Associate",email:"monisha.dhingra@lse.ac.uk",stage:"other"},
+  {name:"Niraj Kumar Singh",inst:"Curai Health",title:"Machine Learning Engineer",email:"neerajajaysingh17@gmail.com",stage:"other"},
+  {name:"Shruti Gopal Vij",inst:"Takeda Pharmaceuticals",title:"Associate Director, Digital Platforms",email:"shrutigvij@gmail.com",stage:"other"},
+  {name:"Shruti Japee",inst:"National Institutes of Health",title:"Senior Associate Scientist",email:"Japees@mail.nih.gov",stage:"other"},
+  {name:"Niharika Gajawelli",inst:"Children's Hospital Los Angeles",title:"Research Data Analyst",email:"gajawell@stanford.edu",stage:"other"},
+  {name:"Srinivas Kota",inst:"Abbott Biowearables",title:"Staff Data Scientist",email:"svkota@gmail.com",stage:"other"},
+  {name:"Keerthana Iyer",inst:"FENS / ALBA Network",title:"Partnerships & Development Manager",email:"keerthana.iyer@fens.org",stage:"other"},
+  {name:"Lavangi Naithani",inst:"Sangath",title:"Programme Coordinator",email:"lavangi1809@gmail.com",stage:"other"},
+  {name:"Yash Bhambhani",inst:"Montefiore Medical Center",title:"Attending Psychologist",email:"Yashnpbhambhani@gmail.com",stage:"other"},
+  {name:"Rebecca Shafee",inst:"NIMH",title:"Research Fellow",email:"rebeccashafee@gmail.com",stage:"other"},
+  {name:"Sruthi Swami",inst:"California State University, Fresno & Sacramento",title:"Assistant Professor",email:"drsruthiswami@gmail.com",stage:"professor"},
+  {name:"Sowmyashree Mayur Kaku",inst:"St. John's Medical College Hospital",title:"Clinical Research Associate",email:"sowmeey@gmail.com",stage:"other"},
+  {name:"Mariam Hussain",inst:"UC San Diego / West LA VA",title:"Clinical Psych Intern",email:"m3hussai@health.ucsd.edu",stage:"other"},
+  {name:"Sahana Murali",inst:"TN Dr MGR Medical University",title:"Post-Bacc Student",email:"sahanamurali1998@gmail.com",stage:"other"},
+  {name:"Unaisa Bhayat",inst:"Ross University School of Medicine",title:"MD Graduate",email:"bhayat.unaisa@gmail.com",stage:"other"},
+  {name:"Niharika Verma",inst:"Loma Linda University",title:"PsyD Student",email:"niharikamverma@gmail.com",stage:"phd"},
+  {name:"Mithila Mahale",inst:"Loma Linda University",title:"PhD Student",email:"mithila.mahale@gmail.com",stage:"phd"},
+];
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function initials(name) {
+  return name.trim().split(/\s+/).filter(w => /^[A-Za-z]/.test(w)).slice(0,2).map(w => w[0].toUpperCase()).join('');
+}
+
+const sectionMeta = {
+  professor: { label: "Professors & Faculty", order: 0 },
+  postdoc:   { label: "Postdocs & Research Scientists", order: 1 },
+  phd:       { label: "PhD & Doctoral Students", order: 2 },
+  grad:      { label: "Graduate & Masters Students", order: 3 },
+  undergrad:  { label: "Undergraduate Students", order: 4 },
+  other:     { label: "Professionals & Others", order: 5 },
+};
+
+let currentFilter = 'all';
+let currentSearch = '';
+
+function renderAll() {
+  const main = document.getElementById('main-content');
+  // Clear sections
+  main.querySelectorAll('.section-heading, .card-grid').forEach(el => el.remove());
+
+  const stages = Object.keys(sectionMeta).sort((a,b) => sectionMeta[a].order - sectionMeta[b].order);
+  let totalVisible = 0;
+
+  stages.forEach(stage => {
+    const filtered = members.filter(m => {
+      const matchStage = currentFilter === 'all' || m.stage === currentFilter;
+      const q = currentSearch.toLowerCase();
+      const matchSearch = !q || m.name.toLowerCase().includes(q) || m.inst.toLowerCase().includes(q) || m.title.toLowerCase().includes(q);
+      return m.stage === stage && matchStage && matchSearch;
+    });
+    if (filtered.length === 0) return;
+    totalVisible += filtered.length;
+
+    const heading = document.createElement('div');
+    heading.className = 'section-heading';
+    heading.setAttribute('data-count', filtered.length);
+    heading.textContent = sectionMeta[stage].label;
+    main.appendChild(heading);
+
+    const grid = document.createElement('div');
+    grid.className = 'card-grid';
+    filtered.forEach((m, i) => {
+      const card = document.createElement('div');
+      card.className = 'member-card';
+      card.style.animationDelay = (i * 30) + 'ms';
+      const ini = initials(m.name);
+      const emailHtml = m.email
+        ? `<a class="email-btn" href="mailto:${m.email}" title="${m.email}">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Contact
+           </a>`
+        : `<span class="no-email">—</span>`;
+      card.innerHTML = `
+        <div class="avatar-wrap">
+          <div class="avatar-initials">${ini}</div>
+        </div>
+        <div class="member-name">${m.name}</div>
+        <div class="member-title">${m.title}</div>
+        <div class="member-inst">${m.inst}</div>
+        <div class="card-footer">${emailHtml}</div>`;
+      grid.appendChild(card);
+    });
+    main.appendChild(grid);
+  });
+
+  const empty = document.getElementById('empty-state');
+  empty.classList.toggle('show', totalVisible === 0);
+}
+
+function filterCards(stage, btn) {
+  currentFilter = stage;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAll();
+}
+
+function searchCards(val) {
+  currentSearch = val;
+  renderAll();
+}
+
+// Stats
+function computeStats() {
+  const total = members.length;
+  const insts = new Set(members.map(m => m.inst.split('/')[0].trim())).size;
+  // rough country count from institution keywords
+  const countryKeywords = {
+    'UK|London|Edinburgh|Sussex|Reading|Leeds|Newcastle|Oxford|Cambridge|Warwick|Stirling|Manchester|Holloway': 'UK',
+    'Canada|McGill|Western|Toronto|Brock|Guelph|Montreal|UWO': 'Canada',
+    'Australia|Melbourne': 'Australia',
+    'Germany|Augsburg|Magdeburg|Tuebingen': 'Germany',
+    'India|IIT|IISER|AIIMS|BITS|NISER|Delhi': 'India',
+    'France|Paris|Aix-Marseille|Marseille|Bordeaux|Rennes': 'France',
+    'Austria': 'Austria',
+    'Bangladesh|Brac': 'Bangladesh',
+    'Ireland|Dublin': 'Ireland',
+    'Netherlands|Amsterdam': 'Netherlands',
+    'Singapore': 'Singapore',
+    'Switzerland|Lausanne': 'Switzerland',
+    'Taiwan|Taipei': 'Taiwan',
+  };
+  const countries = new Set(['USA']);
+  members.forEach(m => {
+    Object.keys(countryKeywords).forEach(kw => {
+      if (new RegExp(kw,'i').test(m.inst)) countries.add(countryKeywords[kw]);
+    });
+  });
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-inst').textContent = insts + '+';
+  document.getElementById('stat-countries').textContent = countries.size + '+';
+}
+
+computeStats();
+renderAll();
+</script>
+</body>
+</html>
